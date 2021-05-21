@@ -39,4 +39,25 @@ class TestesBaseDados {
         return Paciente.fromCursor(cursor)
     }
 
+
+    private fun insereVacinas(tabela: TabelaVacinas, vacinas:Vacinas):Long{
+        val id = tabela.insert(vacinas.toContentValues())
+        assertNotEquals(-1,id)
+
+        return id
+    }
+
+    private fun getVacinasBaseDAdos(tabela: TabelaVacinas, id: Long):Vacinas{
+        val cursor = tabela.query(
+            TabelaVacinas.TODAS_COLUNAS,
+            "${BaseColumns._ID}=?",
+            arrayOf(id.toString()),
+            null, null, null
+        )
+        assertNotNull(cursor)
+        assert(cursor!!.moveToNext())
+
+        return Vacinas.fromCursor(cursor)
+    }
+
 }

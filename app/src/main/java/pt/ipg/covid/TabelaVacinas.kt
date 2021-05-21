@@ -26,11 +26,11 @@ class TabelaVacinas(db: SQLiteDatabase) {
 
     fun query(
         columns: Array<String>,
-        selection: String,
-        selectionArgs: Array<String>,
-        groupBy: String,
-        having: String,
-        orderBy: String
+        selection: String?,
+        selectionArgs: Array<String>?,
+        groupBy: String?,
+        having: String?,
+        orderBy: String?
     ): Cursor? {
         return db.query(TabelaPacientes.NOME_TABELA, columns, selection, selectionArgs, groupBy, having, orderBy)
     }
@@ -42,6 +42,12 @@ class TabelaVacinas(db: SQLiteDatabase) {
         const val CAMPO_DATA = "data"
         const val CAMPO_LOCAL = "local"
         const val CAMPO_ID_PACIENTE = "id_paciente"
+
+        val TODAS_COLUNAS = arrayOf(BaseColumns._ID,
+            TabelaVacinas.CAMPO_DATA,
+            TabelaVacinas.CAMPO_LOCAL,
+            TabelaVacinas.CAMPO_ID_PACIENTE
+        )
     }
 
 

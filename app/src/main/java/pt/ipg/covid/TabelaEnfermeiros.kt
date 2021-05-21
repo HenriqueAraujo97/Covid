@@ -25,12 +25,12 @@ class TabelaEnfermeiros(db: SQLiteDatabase) {
     }
 
     fun query(
-        columns: Array<String>,
-        selection: String,
-        selectionArgs: Array<String>,
-        groupBy: String,
-        having: String,
-        orderBy: String
+        columns: Array<String>?,
+        selection: String?,
+        selectionArgs: Array<String>?,
+        groupBy: String?,
+        having: String?,
+        orderBy: String?
     ): Cursor? {
         return db.query(TabelaVacinas.NOME_TABELA, columns, selection, selectionArgs, groupBy, having, orderBy)
     }
@@ -42,6 +42,12 @@ class TabelaEnfermeiros(db: SQLiteDatabase) {
         const val NOME_ENFERMEIRO = "nome"
         const val NR_ENFERMEIRO = "numero"
         const val CAMPO_ID_ENFERMEIRO = "id_enfermeiro"
+
+        val TODAS_COLUNAS = arrayOf(BaseColumns._ID,
+            TabelaEnfermeiros.NOME_ENFERMEIRO,
+            TabelaEnfermeiros.NR_ENFERMEIRO,
+            TabelaEnfermeiros.CAMPO_ID_ENFERMEIRO
+        )
 
     }
 }
