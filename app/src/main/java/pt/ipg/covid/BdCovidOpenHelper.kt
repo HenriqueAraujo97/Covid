@@ -10,6 +10,7 @@ class BdCovidOpenHelper(context: Context?) : SQLiteOpenHelper(context, NOME_BASE
         if(db != null){
             TabelaPacientes(db).cria()
             TabelaVacinas(db).cria()
+            TabelaEnfermeiros(db).cria()
 
         }
     }
