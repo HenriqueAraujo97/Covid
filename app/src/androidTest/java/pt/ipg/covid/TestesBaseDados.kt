@@ -16,10 +16,18 @@ import org.junit.Assert.*
  */
 @RunWith(AndroidJUnit4::class)
 class TestesBaseDados {
+
     private  fun getAppContext() = InstrumentationRegistry.getInstrumentation().targetContext
     private  fun getBdCovidOpenHelper() = BdCovidOpenHelper(getAppContext())
 
-    private fun inserePacientes(tabela: TabelaPacientes, pacientes:Pacientes):Long{
+    @Test
+    fun consegueAbrirBaseDados() {
+        val db = getBdCovidOpenHelper().readableDatabase
+        assert(db.isOpen)
+        db.close()
+    }
+
+    private fun inserePacientes(tabela: TabelaPacientes, pacientes: Paciente):Long{
         val id = tabela.insert(pacientes.toContentValues())
         assertNotEquals(-1,id)
 
@@ -40,7 +48,7 @@ class TestesBaseDados {
     }
 
 
-    private fun insereVacinas(tabela: TabelaVacinas, vacinas:Vacinas):Long{
+  /*  private fun insereVacinas(tabela: TabelaVacinas, vacinas:Vacinas):Long{
         val id = tabela.insert(vacinas.toContentValues())
         assertNotEquals(-1,id)
 
@@ -59,5 +67,5 @@ class TestesBaseDados {
 
         return Vacinas.fromCursor(cursor)
     }
-
+*/
 }
