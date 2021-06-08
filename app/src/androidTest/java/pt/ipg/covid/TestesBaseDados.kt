@@ -34,7 +34,7 @@ class TestesBaseDados {
         return id
     }
 
-    private fun getPacienteBaseDAdos(tabela: TabelaPacientes, id: Long):Pacientes{
+    private fun getPacienteBaseDAdos(tabela: TabelaPacientes, id: Long):Paciente{
         val cursor = tabela.query(
             TabelaPacientes.TODAS_COLUNAS,
             "${BaseColumns._ID}=?",
