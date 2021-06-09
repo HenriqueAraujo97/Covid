@@ -25,7 +25,7 @@ data class Paciente(var id: Long = -1, var nome: String, var nascimento: Long, v
             val colIVacina = cursor.getColumnIndex(TabelaPacientes.CAMPO_ID_VACINA)
 
             val id= cursor.getLong(colId)
-            val nome = cursor.getLong(colNome)
+            val nome = cursor.getString(colNome)
             val nascimento = cursor.getLong(colNascimento)
             val numero = cursor.getLong(colNumero)
             val idVacina = cursor.getLong(colIVacina)
