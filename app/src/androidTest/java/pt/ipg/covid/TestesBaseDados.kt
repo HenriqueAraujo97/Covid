@@ -48,14 +48,14 @@ class TestesBaseDados {
     }
 
 
-   private fun insereVacinas(tabela: TabelaVacinas, vacinas:Vacinas):Long{
+   private fun insereVacinas(tabela: TabelaVacinas, vacinas:Vacina):Long{
         val id = tabela.insert(vacinas.toContentValues())
         assertNotEquals(-1,id)
 
         return id
     }
 
-    private fun getVacinasBaseDAdos(tabela: TabelaVacinas, id: Long):Vacinas{
+    private fun getVacinasBaseDAdos(tabela: TabelaVacinas, id: Long):Vacina{
         val cursor = tabela.query(
             TabelaVacinas.TODAS_COLUNAS,
             "${BaseColumns._ID}=?",
@@ -65,7 +65,7 @@ class TestesBaseDados {
         assertNotNull(cursor)
         assert(cursor!!.moveToNext())
 
-        return Vacinas.fromCursor(cursor)
+        return Vacina.fromCursor(cursor)
     }
 
 }
