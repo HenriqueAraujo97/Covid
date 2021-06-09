@@ -8,6 +8,7 @@ import org.junit.Test
 import org.junit.runner.RunWith
 
 import org.junit.Assert.*
+import java.util.*
 
 /**
  * Instrumented test, which will execute on an Android device.
@@ -20,6 +21,8 @@ class TestesBaseDados {
     private  fun getAppContext() = InstrumentationRegistry.getInstrumentation().targetContext
     private  fun getBdCovidOpenHelper() = BdCovidOpenHelper(getAppContext())
 
+    private fun Data(ano: Int, mes: Int, dia: Int) = Date(ano - 1900, mes, dia)
+
     @Test
     fun consegueAbrirBaseDados() {
         val db = getBdCovidOpenHelper().readableDatabase
@@ -30,6 +33,8 @@ class TestesBaseDados {
     private fun inserePacientes(tabela: TabelaPacientes, pacientes: Paciente):Long{
         val id = tabela.insert(pacientes.toContentValues())
         assertNotEquals(-1,id)
+
+        Date(2020 - 1900, 12, 1)
 
         return id
     }
