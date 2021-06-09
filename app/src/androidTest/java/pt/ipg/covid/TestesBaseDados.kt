@@ -48,7 +48,7 @@ class TestesBaseDados {
     }
 
 
-  /*  private fun insereVacinas(tabela: TabelaVacinas, vacinas:Vacinas):Long{
+   private fun insereVacinas(tabela: TabelaVacinas, vacinas:Vacinas):Long{
         val id = tabela.insert(vacinas.toContentValues())
         assertNotEquals(-1,id)
 
@@ -67,5 +67,5 @@ class TestesBaseDados {
 
         return Vacinas.fromCursor(cursor)
     }
-*/
+
 }
