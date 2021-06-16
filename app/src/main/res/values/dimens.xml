@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margem_titulo">30dp</dimen>
+    <dimen name="tamanho_titulo">33dp</dimen>
+    <dimen name="margem_butao">27dp</dimen>
+</resources>
