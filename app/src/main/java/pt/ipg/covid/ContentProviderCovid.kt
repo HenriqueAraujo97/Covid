@@ -131,8 +131,27 @@ class ContentProviderCovid : ContentProvider() {
         }
     }
 
-    override fun update(p0: Uri, p1: ContentValues?, p2: String?, p3: Array<out String>?): Int {
-        TODO("Not yet implemented")
+    override fun update(uri: Uri, values: ContentValues?, selection: String?, selectionArgs: Array<out String>?): Int {
+        val bd = bdCovidOpenHelper!!.writableDatabase
+
+        return  when (getUriMatcher().match(uri)){
+            URI_PACIENTE_ESPECIFICO -> TabelaPacientes(bd).update(
+                values!!,
+                "${BaseColumns._ID}=?",
+                arrayOf(uri.lastPathSegment!!)
+            )
+            URI_ENFERMEIRO_ESPECIFICO -> TabelaEnfermeiros(bd).update(
+                values!!,
+                "${BaseColumns._ID}=?",
+                arrayOf(uri.lastPathSegment!!)
+            )
+            URI_VACIA_EPECIFICA -> TabelaVacinas(bd).update(
+                values!!,
+                "${BaseColumns._ID}=?",
+                arrayOf(uri.lastPathSegment!!)
+            )
+            else -> 0
+        }
     }
 
     companion object{
