@@ -43,11 +43,7 @@ class TabelaEnfermeiros(db: SQLiteDatabase) {
         const val NR_ENFERMEIRO = "numero"
         const val CAMPO_ID_ENFERMEIRO = "id_enfermeiro"
 
-        val TODAS_COLUNAS = arrayOf(BaseColumns._ID,
-            TabelaEnfermeiros.NOME_ENFERMEIRO,
-            TabelaEnfermeiros.NR_ENFERMEIRO,
-            TabelaEnfermeiros.CAMPO_ID_ENFERMEIRO
-        )
+        val TODAS_COLUNAS = arrayOf(BaseColumns._ID, NOME_ENFERMEIRO, NR_ENFERMEIRO, CAMPO_ID_ENFERMEIRO)
 
     }
 }

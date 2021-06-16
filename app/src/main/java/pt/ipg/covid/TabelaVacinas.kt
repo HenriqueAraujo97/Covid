@@ -41,13 +41,9 @@ class TabelaVacinas(db: SQLiteDatabase) {
         const val NOME_TABELA = "vacinas"
         const val CAMPO_DATA = "data"
         const val CAMPO_LOCAL = "local"
-        const val CAMPO_ID_PACIENTE = "id_paciente"
+        //const val CAMPO_ID_PACIENTE = "id_paciente"
 
-        val TODAS_COLUNAS = arrayOf(BaseColumns._ID,
-            TabelaVacinas.CAMPO_DATA,
-            TabelaVacinas.CAMPO_LOCAL,
-            TabelaVacinas.CAMPO_ID_PACIENTE
-        )
+        val TODAS_COLUNAS = arrayOf(BaseColumns._ID,CAMPO_DATA, CAMPO_LOCAL)// CAMPO_ID_PACIENTE)
     }
 
 
