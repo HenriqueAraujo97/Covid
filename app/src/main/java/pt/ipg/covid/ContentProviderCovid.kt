@@ -8,7 +8,7 @@ import android.net.Uri
 import android.provider.BaseColumns
 import kotlin.reflect.KTypeProjection
 
-class ContentProviderPaciente : ContentProvider() {
+class ContentProviderCovid : ContentProvider() {
     private var bdCovidOpenHelper : BdCovidOpenHelper? = null
     override fun onCreate(): Boolean {
         bdCovidOpenHelper = BdCovidOpenHelper(context)
@@ -111,7 +111,24 @@ class ContentProviderPaciente : ContentProvider() {
     }
 
     override fun delete(uri: Uri, selection: String?, selectionArgs: Array<out String>?): Int {
-        TODO("Not yet implemented")
+        val bd = bdCovidOpenHelper!!.writableDatabase
+
+        return when (getUriMatcher().match(uri)){
+            URI_PACIENTE_ESPECIFICO -> TabelaPacientes(bd).delete(
+                "${BaseColumns._ID}=?",
+                arrayOf(uri.lastPathSegment!!)
+            )
+            URI_ENFERMEIRO_ESPECIFICO -> TabelaEnfermeiros(bd).delete(
+                "${BaseColumns._ID}=?",
+                arrayOf(uri.lastPathSegment!!)
+            )
+            URI_VACIA_EPECIFICA -> TabelaVacinas(bd).delete(
+                "${BaseColumns._ID}=?",
+                arrayOf(uri.lastPathSegment!!)
+            )
+            else -> 0
+
+        }
     }
 
     override fun update(p0: Uri, p1: ContentValues?, p2: String?, p3: Array<out String>?): Int {
