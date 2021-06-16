@@ -79,12 +79,20 @@ class ContentProviderPaciente : ContentProvider() {
             )
 
             else -> null
-            
+
         }
     }
 
-    override fun getType(p0: Uri): String? {
-        TODO("Not yet implemented")
+    override fun getType(uri: Uri): String? {
+       return when (getUriMatcher().match(uri)){
+           URI_PACIENTES -> "$MULTIPLOS_ITEMS/$PACIENTES"
+           URI_PACIENTE_ESPECIFICO -> "$UNICO_ITEMS/$PACIENTES"
+           URI_ENFERMEIROS -> "$MULTIPLOS_ITEMS/$ENFERMEIROS"
+           URI_ENFERMEIRO_ESPECIFICO -> "$UNICO_ITEMS/$ENFERMEIROS"
+           URI_VACINAS -> "$MULTIPLOS_ITEMS/$VACINAS"
+           URI_VACIA_EPECIFICA -> "$UNICO_ITEMS/$VACINAS"
+           else -> null
+       }
     }
 
     override fun insert(p0: Uri, p1: ContentValues?): Uri? {
