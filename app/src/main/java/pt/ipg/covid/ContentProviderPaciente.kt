@@ -95,11 +95,22 @@ class ContentProviderPaciente : ContentProvider() {
        }
     }
 
-    override fun insert(p0: Uri, p1: ContentValues?): Uri? {
-        TODO("Not yet implemented")
+    override fun insert(uri: Uri, values: ContentValues?): Uri? {
+        val bd = bdCovidOpenHelper!!.writableDatabase
+
+        val id = when (getUriMatcher().match(uri)){
+            URI_PACIENTES -> TabelaPacientes(bd).insert(values!!)
+            URI_ENFERMEIROS -> TabelaEnfermeiros(bd).insert(values!!)
+            URI_VACINAS -> TabelaVacinas(bd).insert(values!!)
+            else -> -1L
+        }
+
+        if( id == -1L) return null
+
+        return Uri.withAppendedPath(uri,id.toString())
     }
 
-    override fun delete(p0: Uri, p1: String?, p2: Array<out String>?): Int {
+    override fun delete(uri: Uri, selection: String?, selectionArgs: Array<out String>?): Int {
         TODO("Not yet implemented")
     }
 
