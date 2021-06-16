@@ -12,7 +12,7 @@
         android:layout_margin="@dimen/tabela_pacientes"
         android:gravity="center"
         android:shadowColor="@color/cabecalho"
-        android:text="Paciente"
+        android:text="Enfermeiro"
         android:textColor="@color/cabecalho"
         android:textSize="30sp" />
 
@@ -24,15 +24,6 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Nome" />
-
-    <EditText
-        android:id="@+id/editTextDate"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/tabela_pacientes"
-        android:ems="10"
-        android:hint="Data De Nascimento"
-        android:inputType="date" />
 
     <EditText
         android:id="@+id/editTextNumber"
