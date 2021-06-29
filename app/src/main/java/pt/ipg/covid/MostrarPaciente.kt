@@ -16,9 +16,9 @@ class MostrarPaciente : AppCompatActivity() {
     }
 
     fun guardarPacientes(view: View){
-        val editTextName = findViewById<EditText>(R.id.editTextTextName)
+        val editTextName = findViewById<EditText>(R.id.editTextTextPersonName)
         val editTextDate = findViewById<EditText>(R.id.editTextDate)
-        val editTextNumero = findViewById<EditText>(R.id.editTextNumero)
+        val editTextNumero = findViewById<EditText>(R.id.editTextNumber)
 
         val nome = editTextName.text.toString()
         val data = editTextDate.text.toString()
@@ -52,6 +52,14 @@ class MostrarPaciente : AppCompatActivity() {
 
             startActivity(intent)
         }
+    }
+
+    fun listaPacientes(view: View){
+
+        val intentPaciente = Intent(this,ListaPacientesFragment::class.java)
+
+        startActivity(intentPaciente)
+
     }
 
 

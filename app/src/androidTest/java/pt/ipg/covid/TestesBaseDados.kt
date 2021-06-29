@@ -1,6 +1,7 @@
 package pt.ipg.covid
 
 import android.provider.BaseColumns
+import android.provider.VoicemailContract
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
 
@@ -110,7 +111,63 @@ class TestesBaseDados {
         val db = getBdCovidOpenHelper().writableDatabase
         val tabelaVacinas = TabelaVacinas(db)
 
-        val vacina = Vacina( Date(2030 - 1900, 12, 10),nome = "Pfizer")
+        val vacina = Vacina( data = Date(2023,12,12),nome = "Pfizer")
+        vacina.id = insereVacinas(tabelaVacinas, vacina)
+
+        assertEquals(vacina, getVacinaBaseDados(tabelaVacinas, vacina.id))
+
+        db.close()
+    }
+
+    @Test
+    fun consegueAlterarVacinas(){
+        val db = getBdCovidOpenHelper().writableDatabase
+        val tabelaVacinas = TabelaVacinas(db)
+
+        val vacina = Vacina(data = Date(2024,8,21), nome = "Moderna")
+        vacina.id = insereVacinas(tabelaVacinas, vacina)
+
+        vacina.nome = "Sputnik"
+
+        val registosAlterados = tabelaVacinas.update(
+            vacina.toContentValues(),
+            "${BaseColumns._ID}=?",
+            arrayOf(vacina.id.toString())
+        )
+
+        assertEquals(1,registosAlterados)
+
+        assertEquals(vacina,getVacinaBaseDados(tabelaVacinas,vacina.id))
+
+        db.close()
+
+
+    }
+
+    @Test
+    fun consegueEliminarVacinas() {
+        val db = getBdCovidOpenHelper().writableDatabase
+        val tabelaVacinas = TabelaVacinas(db)
+
+        val vacina = Vacina(data = Date(2022,10,29),nome = "teste")
+        vacina.id = insereVacinas(tabelaVacinas, vacina)
+
+        val registosEliminados = tabelaVacinas.delete(
+            "${BaseColumns._ID}=?",
+            arrayOf(vacina.id.toString())
+        )
+
+        assertEquals(1, registosEliminados)
+
+        db.close()
+    }
+
+    @Test
+    fun consegueLerVacinas() {
+        val db = getBdCovidOpenHelper().writableDatabase
+        val tabelaVacinas = TabelaVacinas(db)
+
+        val vacina = Vacina(data = Date(2028,7,5),nome = "Aventura")
         vacina.id = insereVacinas(tabelaVacinas, vacina)
 
         assertEquals(vacina, getVacinaBaseDados(tabelaVacinas, vacina.id))

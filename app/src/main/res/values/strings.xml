@@ -8,14 +8,14 @@
     <string name="nome_obrigatorio">Por favor introduza o nome</string>
     <string name="data_obrigatorio">Por favor introduza a sua data de nascimento</string>
     <string name="telefone_obrigatorio">Por favor introduza o telefone</string>
-    <string name="enfermeiro">Enfermeiro</string>
     <string name="n_mero">Número</string>
     <string name="guardar">Guardar</string>
-    <string name="nome">Nome</string>
-    <string name="paciente">Paciente</string>
-    <string name="nome">Nome</string>
     <string name="data_de_nascimento">Data De Nascimento</string>
-    <string name="n_mero">Número</string>
-    <string name="guardar">Guardar</string>
     <string name="ver_pacientes">Ver Pacientes</string>
+    <string name="textview">TextView</string>
+    <string name="name_pacientes">Name</string>
+    <string name="textviewcovid">TextView</string>
+    <string name="name_paciente">Name</string>
+    <string name="guardar_paciente">Guardar</string>
+    <string name="lista_pacientes">Lista Pacientes</string>
 </resources>

@@ -1,29 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/textViewPacintes"
+        android:id="@+id/textView2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/tabela_pacientes"
-        android:gravity="center"
-        android:shadowColor="@color/cabecalho"
-        android:text="@string/paciente"
-        android:textColor="@color/cabecalho"
-        android:textSize="30sp" />
+        android:layout_height="24dp"
+        android:layout_margin="@dimen/margem_butao"
+        android:text="@string/textviewcovid" />
 
     <EditText
-        android:id="@+id/editTextTextName"
+        android:id="@+id/editTextTextPersonName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/tabela_pacientes"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/nome"
+        android:text="@string/name_paciente"
         android:autofillHints="" />
 
     <EditText
@@ -32,34 +29,30 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/tabela_pacientes"
         android:ems="10"
-        android:hint="@string/data_de_nascimento"
         android:inputType="date"
         android:autofillHints="" />
 
     <EditText
-        android:id="@+id/editTextNumero"
+        android:id="@+id/editTextNumber"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/tabela_pacientes"
         android:ems="10"
-        android:hint="@string/n_mero"
         android:inputType="number"
         android:autofillHints="" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonGuardar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/margem_butao"
-        android:onClick="guardarPaciente"
-        android:text="@string/guardar"
-        app:backgroundTint="@color/botao" />
+        android:layout_margin="@dimen/tabela_pacientes"
+        android:text="@string/guardar_paciente" />
 
     <Button
-        android:id="@+id/buttonVerPacientes"
+        android:id="@+id/buttonLista"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/margem_butao"
-        android:text="@string/ver_pacientes" />
-
+        android:layout_margin="@dimen/tabela_pacientes"
+        android:onClick="ListaPacientes"
+        android:text="@string/lista_pacientes" />
 </LinearLayout>

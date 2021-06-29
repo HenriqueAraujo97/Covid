@@ -1,47 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textViewPacintes"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/tabela_pacientes"
-        android:gravity="center"
-        android:shadowColor="@color/cabecalho"
-        android:text="@string/enfermeiro"
-        android:textColor="@color/cabecalho"
-        android:textSize="30sp" />
-
-    <EditText
-        android:id="@+id/editTextTextName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/tabela_pacientes"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="@string/nome"
-        android:autofillHints="" />
-
-    <EditText
-        android:id="@+id/editTextNumero"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/tabela_pacientes"
-        android:ems="10"
-        android:hint="@string/n_mero"
-        android:inputType="number"
-        android:autofillHints="" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/tabela_pacientes"
-        android:text="@string/guardar"
-        app:backgroundTint="@color/botao" />
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
