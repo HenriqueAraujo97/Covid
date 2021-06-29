@@ -2,7 +2,7 @@
 <resources>
     <dimen name="margem_titulo">30dp</dimen>
     <dimen name="tamanho_titulo">33dp</dimen>
-    <dimen name="margem_butao">27dp</dimen>
+    <dimen name="margem_butao">17dp</dimen>
 
     <dimen name="tabela_pacientes">17dp</dimen>
 
