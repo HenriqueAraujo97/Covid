@@ -12,7 +12,7 @@
         android:layout_margin="@dimen/tabela_pacientes"
         android:gravity="center"
         android:shadowColor="@color/cabecalho"
-        android:text="Paciente"
+        android:text="@string/paciente"
         android:textColor="@color/cabecalho"
         android:textSize="30sp" />
 
@@ -23,7 +23,8 @@
         android:layout_margin="@dimen/tabela_pacientes"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Nome" />
+        android:text="@string/nome"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/editTextDate"
@@ -31,8 +32,9 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/tabela_pacientes"
         android:ems="10"
-        android:hint="Data De Nascimento"
-        android:inputType="date" />
+        android:hint="@string/data_de_nascimento"
+        android:inputType="date"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/editTextNumero"
@@ -40,16 +42,24 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/tabela_pacientes"
         android:ems="10"
-        android:hint="Número"
-        android:inputType="number" />
+        android:hint="@string/n_mero"
+        android:inputType="number"
+        android:autofillHints="" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/tabela_pacientes"
+        android:layout_margin="@dimen/margem_butao"
         android:onClick="guardarPaciente"
-        android:text="Guardar"
+        android:text="@string/guardar"
         app:backgroundTint="@color/botao" />
+
+    <Button
+        android:id="@+id/buttonVerPacientes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margem_butao"
+        android:text="@string/ver_pacientes" />
 
 </LinearLayout>

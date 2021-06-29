@@ -12,7 +12,7 @@
         android:layout_margin="@dimen/tabela_pacientes"
         android:gravity="center"
         android:shadowColor="@color/cabecalho"
-        android:text="Enfermeiro"
+        android:text="@string/enfermeiro"
         android:textColor="@color/cabecalho"
         android:textSize="30sp" />
 
@@ -23,7 +23,8 @@
         android:layout_margin="@dimen/tabela_pacientes"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Nome" />
+        android:text="@string/nome"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/editTextNumero"
@@ -31,15 +32,16 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/tabela_pacientes"
         android:ems="10"
-        android:hint="Número"
-        android:inputType="number" />
+        android:hint="@string/n_mero"
+        android:inputType="number"
+        android:autofillHints="" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/tabela_pacientes"
-        android:text="Guardar"
+        android:text="@string/guardar"
         app:backgroundTint="@color/botao" />
 
 </LinearLayout>
