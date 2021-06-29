@@ -1,6 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/textViewEnfermeiro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/tabela_pacientes"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/covidapp"
+        android:textColor="#4CAF50"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonEnfermeiro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/tabela_pacientes"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/name"
+        android:textSize="10sp" />
+
+    <EditText
+        android:id="@+id/editTextNumberEnfermeiro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margem_butao"
+        android:ems="10"
+        android:inputType="number"
+        android:textSize="10sp" />
+
+    <Button
+        android:id="@+id/buttonGuardarEnfermeiro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/tabela_pacientes"
+        android:text="@string/guardar" />
+
+    <Button
+        android:id="@+id/buttonListaEnfermeiros"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/tabela_pacientes"
+        android:text="@string/lista_enfermeiros" />
+</LinearLayout>

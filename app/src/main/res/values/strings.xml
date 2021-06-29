@@ -23,4 +23,8 @@
     <string name="guardar">Guardar</string>
     <string name="ver_lista">Ver Lista</string>
     <string name="covidappPacientes">CovidApp</string>
+    <string name="name">Name</string>
+    <string name="covidapp3">CovidApp</string>
+    <string name="guardarEnfermeiro">Guardar</string>
+    <string name="lista_enfermeiros">Lista Enfermeiros</string>
 </resources>
