@@ -5,4 +5,7 @@
     <string name="vacina">Vacina</string>
     <string name="covidapp">CovidApp</string>
     <string name="todo">TODO</string>
+    <string name="nome_obrigatorio">Por favor introduza o nome</string>
+    <string name="data_obrigatorio">Por favor introduza a sua data de nascimento</string>
+    <string name="telefone_obrigatorio">Por favor introduza o telefone</string>
 </resources>

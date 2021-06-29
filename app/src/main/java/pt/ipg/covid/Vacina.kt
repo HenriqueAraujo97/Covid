@@ -6,11 +6,11 @@ import android.provider.BaseColumns
 import java.time.LocalDate
 import java.util.*
 
-data class Vacina(var id: Long = -1, var data: Date, var local: String, var nome: String) {
+data class Vacina(var id: Long = -1, var data: Date, var nome: String) {
     fun toContentValues() : ContentValues{
         val valores = ContentValues().apply {
             put(TabelaVacinas.CAMPO_DATA,data.time)
-            put(TabelaVacinas.CAMPO_LOCAL,local)
+
             put(TabelaVacinas.NOME_VACINA,nome)
 
             //put(TabelaVacinas.CAMPO_ID_PACIENTE,idPaciente)
@@ -22,17 +22,16 @@ data class Vacina(var id: Long = -1, var data: Date, var local: String, var nome
         fun fromCursor(cursor: Cursor) : Vacina{
             val colId = cursor.getColumnIndex(BaseColumns._ID)
             val colData = cursor.getColumnIndex(TabelaVacinas.CAMPO_DATA)
-            val colLocal = cursor.getColumnIndex(TabelaVacinas.CAMPO_LOCAL)
+
             val colNome = cursor.getColumnIndex(TabelaVacinas.NOME_VACINA)
            // val colIdPaciente = cursor.getColumnIndex(TabelaVacinas.CAMPO_ID_PACIENTE)
 
             val id = cursor.getLong(colId)
             val data = Date(cursor.getLong(colData))
-            val local = cursor.getString(colLocal)
             val nome = cursor.getString(colNome)
             //val idPaciente = cursor.getLong(colIdPaciente)
 
-            return Vacina( id, data, local,nome) //idPaciente)
+            return Vacina( id, data, nome) //idPaciente)
         }
     }
 }
