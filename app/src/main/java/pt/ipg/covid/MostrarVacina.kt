@@ -8,7 +8,7 @@ class MostrarVacina : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
         super.onCreate(savedInstanceState, persistentState)
-        setContentView(R.layout.vacinas)
+        //setContentView(R.layout.vacinas)
 
     }
 

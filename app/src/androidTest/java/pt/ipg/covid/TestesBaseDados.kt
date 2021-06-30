@@ -67,7 +67,7 @@ class TestesBaseDados {
 
     private fun getEnfermeiroBaseDados(tabela: TabelaEnfermeiros, id: Long):Enfermeiro{
         val cursor = tabela.query(
-            TabelaPacientes.TODAS_COLUNAS,
+            TabelaEnfermeiros.TODAS_COLUNAS,
             "${BaseColumns._ID}=?",
             arrayOf(id.toString()),
             null, null, null
@@ -80,7 +80,7 @@ class TestesBaseDados {
 
     private fun getVacinaBaseDados(tabela: TabelaVacinas, id: Long):Vacina{
         val cursor = tabela.query(
-            TabelaPacientes.TODAS_COLUNAS,
+            TabelaVacinas.TODAS_COLUNAS,
             "${BaseColumns._ID}=?",
             arrayOf(id.toString()),
             null, null, null
@@ -111,7 +111,7 @@ class TestesBaseDados {
         val db = getBdCovidOpenHelper().writableDatabase
         val tabelaVacinas = TabelaVacinas(db)
 
-        val vacina = Vacina( data = Date(2023,12,12),nome = "Pfizer")
+        val vacina = Vacina( data = Date(2023 - 1900,12,12),nome = "Pfizer")
         vacina.id = insereVacinas(tabelaVacinas, vacina)
 
         assertEquals(vacina, getVacinaBaseDados(tabelaVacinas, vacina.id))

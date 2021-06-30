@@ -14,25 +14,10 @@ class MainActivity : AppCompatActivity() {
 
     fun verPaciente(view: View){
 
-        val intentPaciente = Intent(this,MostrarPaciente::class.java)
+        val intentPaciente = Intent(this,activity_paciente::class.java)
 
         startActivity(intentPaciente)
 
     }
 
-    fun verEnfermeiro(view: View){
-
-        val intentEnfermeiro = Intent(this,MostrarEnfermeiro::class.java)
-
-        startActivity(intentEnfermeiro)
-
-    }
-
-    fun verVacina(view: View){
-
-        val intentVacina = Intent(this,MostrarVacina::class.java)
-
-        startActivity(intentVacina)
-
-    }
 }

@@ -9,19 +9,19 @@ class TabelaVacinas(db: SQLiteDatabase) {
     private val db: SQLiteDatabase = db
 
     fun cria() {
-        db.execSQL("CREATE TABLE $NOME_TABELA (${BaseColumns._ID} INTEGER PRIMARY KEY AUTOINCREMENT,$NOME_VACINA STRING NOT NULL  ,$CAMPO_DATA INTEGER NOT NULL )")
+        db.execSQL("CREATE TABLE $NOME_TABELA (${BaseColumns._ID} INTEGER PRIMARY KEY AUTOINCREMENT,$NOME_VACINA TEXT NOT NULL  ,$CAMPO_DATA INTEGER NOT NULL )")
     }
 
     fun insert(values: ContentValues): Long {
-        return db.insert(TabelaPacientes.NOME_TABELA, null, values)
+        return db.insert(NOME_TABELA, null, values)
     }
 
     fun update(values: ContentValues, whereClause: String, whereArgs: Array<String>): Int {
-        return db.update(TabelaPacientes.NOME_TABELA, values, whereClause, whereArgs)
+        return db.update(NOME_TABELA, values, whereClause, whereArgs)
     }
 
     fun delete(whereClause: String, whereArgs: Array<String>): Int {
-        return db.delete(TabelaPacientes.NOME_TABELA, whereClause, whereArgs)
+        return db.delete(NOME_TABELA, whereClause, whereArgs)
     }
 
     fun query(
@@ -32,7 +32,7 @@ class TabelaVacinas(db: SQLiteDatabase) {
         having: String?,
         orderBy: String?
     ): Cursor? {
-        return db.query(TabelaPacientes.NOME_TABELA, columns, selection, selectionArgs, groupBy, having, orderBy)
+        return db.query(NOME_TABELA, columns, selection, selectionArgs, groupBy, having, orderBy)
     }
 
 
@@ -44,7 +44,7 @@ class TabelaVacinas(db: SQLiteDatabase) {
 
         //const val CAMPO_ID_PACIENTE = "id_paciente"
 
-        val TODAS_COLUNAS = arrayOf(BaseColumns._ID,CAMPO_DATA)// CAMPO_ID_PACIENTE)
+        val TODAS_COLUNAS = arrayOf(BaseColumns._ID,CAMPO_DATA, NOME_VACINA)// CAMPO_ID_PACIENTE)
     }
 
 

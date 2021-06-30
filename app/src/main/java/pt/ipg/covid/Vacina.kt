@@ -21,7 +21,6 @@ data class Vacina(var id: Long = -1, var data: Date, var nome: String) {
         fun fromCursor(cursor: Cursor) : Vacina{
             val colId = cursor.getColumnIndex(BaseColumns._ID)
             val colData = cursor.getColumnIndex(TabelaVacinas.CAMPO_DATA)
-
             val colNome = cursor.getColumnIndex(TabelaVacinas.NOME_VACINA)
 
             val id = cursor.getLong(colId)

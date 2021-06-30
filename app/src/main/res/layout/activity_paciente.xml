@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".activity_paciente">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textViewPaciente"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/tabela_pacientes"
-        android:gravity="center_horizontal|center_vertical"
-        android:text="@string/covidapp"
-        android:textColor="#4CAF50"
-        android:textSize="30sp" />
+        android:gravity="center|center_vertical"
+        android:text="CovidApp"
+        android:textColor="#8BC34A"
+        android:textSize="@dimen/tamanho_titulo" />
 
     <EditText
         android:id="@+id/editTextTextPersonName"
@@ -20,11 +23,8 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/tabela_pacientes"
         android:ems="10"
-        android:hint="@string/nome_pacientes"
-        android:importantForAutofill="no"
         android:inputType="textPersonName"
-        android:text="@string/name_pacientes"
-        android:textSize="10sp" />
+        android:text="Name" />
 
     <EditText
         android:id="@+id/editTextDate"
@@ -32,10 +32,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/tabela_pacientes"
         android:ems="10"
-        android:hint="@string/data"
-        android:importantForAutofill="no"
-        android:inputType="date"
-        android:textSize="10sp" />
+        android:inputType="date" />
 
     <EditText
         android:id="@+id/editTextNumber"
@@ -43,24 +40,20 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/tabela_pacientes"
         android:ems="10"
-        android:hint="@string/numero_paciente"
-        android:importantForAutofill="no"
-        android:inputType="number"
-        android:textSize="10sp" />
+        android:inputType="number" />
 
     <Button
-        android:id="@+id/buttonGuardar"
+        android:id="@+id/buttonGuardarPacientes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/tabela_pacientes"
         android:onClick="guardarPacientes"
-        android:text="@string/guardar" />
+        android:text="Guardar" />
 
     <Button
-        android:id="@+id/buttonLista"
+        android:id="@+id/button2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/tabela_pacientes"
-        android:onClick="listaPacientes"
-        android:text="@string/ver_lista" />
+        android:text="Ver Lista" />
 </LinearLayout>

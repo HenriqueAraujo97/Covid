@@ -1,20 +1,16 @@
 package pt.ipg.covid
 
 import android.content.Intent
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.view.View
 import android.widget.EditText
-import androidx.appcompat.app.AppCompatActivity
 
-class MostrarPaciente : AppCompatActivity() {
-
-    override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
-        super.onCreate(savedInstanceState, persistentState)
-        setContentView(R.layout.pacientes)
-
+class activity_paciente : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_paciente)
     }
-
     fun guardarPacientes(view: View){
         val editTextName = findViewById<EditText>(R.id.editTextTextPersonName)
         val editTextDate = findViewById<EditText>(R.id.editTextDate)
@@ -24,7 +20,7 @@ class MostrarPaciente : AppCompatActivity() {
         val data = editTextDate.text.toString()
         val numero = editTextNumero.text.toString()
 
-        var dadosCorretos = true
+       /* var dadosCorretos = true
 
         if (nome.isBlank()) {
             editTextName.error = getString(R.string.nome_obrigatorio)
@@ -69,6 +65,8 @@ class MostrarPaciente : AppCompatActivity() {
         const val INFO_EXTRA_NOME = "NOME"
         const val INFO_EXTRA_DATA = "DATA"
         const val INFO_EXTRA_NUMERO = "NUMERO"
+
+        */
     }
 
 }
