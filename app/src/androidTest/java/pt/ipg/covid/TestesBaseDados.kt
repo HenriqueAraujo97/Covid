@@ -175,6 +175,51 @@ class TestesBaseDados {
         db.close()
     }
 
+    @Test
+    fun consegueInserirPacientes(){
+        val db = getBdCovidOpenHelper().writableDatabase
+
+        val tabelaVacinas = TabelaVacinas(db)
+        val vacina = Vacina(data = Date(2028 - 1901,7,5),nome = "Aventura")
+        vacina.id = insereVacinas(tabelaVacinas, vacina)
+
+        val tabelaPacientes = TabelaPacientes(db)
+        val paciente = Paciente(
+            nome = " Henrique Araujo",
+            nascimento = Date(1997 - 1900,7,5),
+            numero = "934345012",
+            idVacina = vacina.id,
+            nomeVacina = vacina.nome,
+            dataVacina = vacina.data
+
+        )
+        paciente.id = inserePacientes(tabelaPacientes, paciente)
+
+        assertEquals(paciente, getVacinaBaseDados(tabelaVacinas, paciente.id))
+
+    }
+
+   /* @Test
+    fun consegueInserirEnfermeiros(){
+        val db = getBdCovidOpenHelper().writableDatabase
+
+        val tabelaVacinas = TabelaVacinas(db)
+        val vacina = Vacina(data = Date(2028 - 1901,7,5),nome = "Aventura")
+        vacina.id = insereVacinas(tabelaVacinas, vacina)
+
+        val tabelaEnfermeiro = TabelaEnfermeiros(db)
+        val enfermeiro = Enfermeiro(
+            nomeEnf = " Antonio Pereira",
+            numeroEnf = "934345012",
+            idVacina = vacina.id
+
+        )
+        enfermeiro.id = insereEnfermeiros(tabelaEnfermeiro, enfermeiro)
+
+        assertEquals(enfermeiro, getVacinaBaseDados(tabelaVacinas, enfermeiro.id))
+
+    }
+*/
 
 
 }

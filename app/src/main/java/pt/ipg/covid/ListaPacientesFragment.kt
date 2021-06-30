@@ -8,7 +8,7 @@ import androidx.loader.content.Loader
 
 class ListaPacientesFragment : Fragment(),LoaderManager.LoaderCallbacks<Cursor>{
 
-    
+
 
 
     override fun onCreateLoader(id: Int, args: Bundle?): Loader<Cursor> {
