@@ -12,9 +12,12 @@ class activity_paciente : AppCompatActivity() {
         setContentView(R.layout.activity_paciente)
     }
     fun guardarPacientes(view: View){
-        val editTextName = findViewById<EditText>(R.id.editTextTextPersonName)
-        val editTextDate = findViewById<EditText>(R.id.editTextDate)
-        val editTextNumero = findViewById<EditText>(R.id.editTextNumber)
+
+
+
+        val editTextName = findViewById<EditText>(R.id.editTextTextEnfermeiro)
+        val editTextDate = findViewById<EditText>(R.id.editTextDateEnfermeiro)
+        val editTextNumero = findViewById<EditText>(R.id.editTextNumberEnfermeiro)
 
         val nome = editTextName.text.toString()
         val data = editTextDate.text.toString()
@@ -49,10 +52,6 @@ class activity_paciente : AppCompatActivity() {
             startActivity(intent)
         }
     }
-
-
-
-
 
 
     companion object{

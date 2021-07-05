@@ -9,10 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Covid">
+        <activity android:name=".enfermeiroLayout"></activity>
         <activity
             android:name=".lista_pacientes"
             android:label="@string/title_activity_lista_pacientes"
-            android:theme="@style/Theme.Covid.NoActionBar"></activity>
+            android:theme="@style/Theme.Covid.NoActionBar" />
         <activity android:name=".activity_paciente" />
         <activity android:name=".MainActivity">
             <intent-filter>

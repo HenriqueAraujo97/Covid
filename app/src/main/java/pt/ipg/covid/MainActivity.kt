@@ -20,4 +20,13 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    fun verEnfermeiro(view: View){
+
+        val intentPaciente = Intent(this,enfermeiroLayout::class.java)
+
+        startActivity(intentPaciente)
+
+    }
+
+
 }
