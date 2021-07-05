@@ -18,7 +18,7 @@
         android:textSize="@dimen/tamanho_titulo" />
 
     <EditText
-        android:id="@+id/editTextTextEnfermeiro"
+        android:id="@+id/editTextTextPaciente"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/tabela_pacientes"
@@ -27,7 +27,7 @@
         android:text="Name" />
 
     <EditText
-        android:id="@+id/editTextDateEnfermeiro"
+        android:id="@+id/editTextDatePaciente"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/tabela_pacientes"
@@ -35,7 +35,7 @@
         android:inputType="date" />
 
     <EditText
-        android:id="@+id/editTextNumberEnfermeiro"
+        android:id="@+id/editTextNumberPaciente"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/tabela_pacientes"

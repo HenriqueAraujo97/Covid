@@ -15,9 +15,9 @@ class activity_paciente : AppCompatActivity() {
 
 
 
-        val editTextName = findViewById<EditText>(R.id.editTextTextEnfermeiro)
-        val editTextDate = findViewById<EditText>(R.id.editTextDateEnfermeiro)
-        val editTextNumero = findViewById<EditText>(R.id.editTextNumberEnfermeiro)
+        val editTextName = findViewById<EditText>(R.id.editTextTextPaciente)
+        val editTextDate = findViewById<EditText>(R.id.editTextDatePaciente)
+        val editTextNumero = findViewById<EditText>(R.id.editTextNumberPaciente)
 
         val nome = editTextName.text.toString()
         val data = editTextDate.text.toString()

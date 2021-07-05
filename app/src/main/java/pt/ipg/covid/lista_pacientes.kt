@@ -1,11 +1,14 @@
 package pt.ipg.covid
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
 
 class lista_pacientes : AppCompatActivity() {
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_lista_pacientes)
@@ -17,6 +20,14 @@ class lista_pacientes : AppCompatActivity() {
         findViewById<TextView>(R.id.textViewNome).text = nome
         findViewById<TextView>(R.id.textViewNascimento).text = data
         findViewById<TextView>(R.id.textViewNumero).text = numero
+
+
+    }
+    fun editarpaciente(view: View){
+
+        val intentPacienteEdit = Intent(this,editar_paciente::class.java)
+
+        startActivity(intentPacienteEdit)
 
     }
 
