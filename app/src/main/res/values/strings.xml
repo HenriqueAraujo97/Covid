@@ -9,4 +9,11 @@
     <string name="data_obrigatorio">Por favor introduza a sua data de nascimento</string>
     <string name="telefone_obrigatorio">Por favor introduza o telefone</string>
     <string name="data_de_nascimento">Data De Nascimento</string>
+    <string name="title_activity_lista_pacientes">lista_pacientes</string>
+    <string name="textviewNumero">TextView</string>
+    <string name="textView2">Nome</string>
+    <string name="textViewNascimento">Data De Nascimento</string>
+    <string name="textViewTelefone">Telefone</string>
+
+
 </resources>

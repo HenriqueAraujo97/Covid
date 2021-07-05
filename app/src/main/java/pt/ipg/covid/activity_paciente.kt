@@ -20,7 +20,7 @@ class activity_paciente : AppCompatActivity() {
         val data = editTextDate.text.toString()
         val numero = editTextNumero.text.toString()
 
-       /* var dadosCorretos = true
+        var dadosCorretos = true
 
         if (nome.isBlank()) {
             editTextName.error = getString(R.string.nome_obrigatorio)
@@ -39,7 +39,7 @@ class activity_paciente : AppCompatActivity() {
 
 
         if (dadosCorretos) {
-            val intent = Intent(this, MostrarPaciente::class.java).apply {
+            val intent = Intent(this, lista_pacientes::class.java).apply {
                 putExtra(INFO_EXTRA_NOME, nome)
                 putExtra(INFO_EXTRA_DATA, data)
                 putExtra(INFO_EXTRA_NUMERO, numero)
@@ -50,13 +50,7 @@ class activity_paciente : AppCompatActivity() {
         }
     }
 
-    fun listaPacientes(view: View){
 
-        val intentPaciente = Intent(this,ListaPacientesFragment::class.java)
-
-        startActivity(intentPaciente)
-
-    }
 
 
 
@@ -66,7 +60,7 @@ class activity_paciente : AppCompatActivity() {
         const val INFO_EXTRA_DATA = "DATA"
         const val INFO_EXTRA_NUMERO = "NUMERO"
 
-        */
+
     }
 
 }

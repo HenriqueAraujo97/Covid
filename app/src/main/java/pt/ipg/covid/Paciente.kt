@@ -12,8 +12,8 @@ data class Paciente(var id: Long = -1, var nome: String, var nascimento: Date, v
             put(TabelaPacientes.NASCIMENTO_PACIENTE,nascimento.time)
             put(TabelaPacientes.NR_PACIENTE,numero)
             put(TabelaPacientes.CAMPO_ID_VACINA,idVacina)
-            put(TabelaPacientes.CAMPO_EXTERNO_NOME_VACINA,nomeVacina)
-            put(TabelaPacientes.CAMPO_EXTERNO_DATA_VACINA,dataVacina!!.time)
+           // put(TabelaPacientes.CAMPO_EXTERNO_NOME_VACINA,nomeVacina)
+           // put(TabelaPacientes.CAMPO_EXTERNO_DATA_VACINA,dataVacina!!.time)
         }
         return valores
     }

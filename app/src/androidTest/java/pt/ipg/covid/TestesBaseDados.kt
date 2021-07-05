@@ -195,7 +195,7 @@ class TestesBaseDados {
         )
         paciente.id = inserePacientes(tabelaPacientes, paciente)
 
-        assertEquals(paciente, getVacinaBaseDados(tabelaVacinas, paciente.id))
+        assertEquals(paciente, getPacienteBaseDados(tabelaPacientes, paciente.id))
 
     }
 
