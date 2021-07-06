@@ -1,56 +1,55 @@
 package pt.ipg.covid
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.EditText
+import android.widget.ListView
+import androidx.appcompat.app.AppCompatActivity
 
 class enfermeiroLayout : AppCompatActivity() {
+    val dbHandler = BdCovidOpenHelper(this, null)
+    var dataList = ArrayList<HashMap<String, String>>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_enfermeiro_layout)
     }
-    fun guardarEnfermeiros(view: View){
 
 
+    fun loadIntoList(){
 
-        val editTextName = findViewById<EditText>(R.id.editTextTextEnfermeiro)
-        val editTextNumero = findViewById<EditText>(R.id.editTextNumberEnfermeiro)
+        dataList.clear()
+        val cursor = dbHandler.getAllRow()
+        cursor!!.moveToFirst()
 
-        val nome = editTextName.text.toString()
-        val numero = editTextNumero.text.toString()
+        while (!cursor.isAfterLast) {
+            val map = HashMap<String, String>()
+            map["id"] = cursor.getString(cursor.getColumnIndex(BdCovidOpenHelper.COLUMN_ID))
+            map["name"] = cursor.getString(cursor.getColumnIndex(BdCovidOpenHelper.COLUMN_NAME))
+            map["age"] = cursor.getString(cursor.getColumnIndex(BdCovidOpenHelper.COLUMN_AGE))
+            map["email"] = cursor.getString(cursor.getColumnIndex(BdCovidOpenHelper.COLUMN_EMAIL))
+            dataList.add(map)
 
-        var dadosCorretos = true
-
-        if (nome.isBlank()) {
-            editTextName.error = getString(R.string.nome_obrigatorio)
-            dadosCorretos = false
+            cursor.moveToNext()
         }
-
-
-        if (numero.isBlank() && numero.length > 9) {
-            editTextNumero.error = getString(R.string.telefone_obrigatorio)
-            dadosCorretos = false
-        }
-
-
-        if (dadosCorretos) {
-            val intent = Intent(this, lista_enfermeiro::class.java).apply {
-                putExtra(INFO_EXTRA_NOME, nome)
-                putExtra(INFO_EXTRA_NUMERO, numero)
-
-            }
-
+        findViewById<ListView>(R.id.listView).adapter = CustomAdapter(this@enfermeiroLayout, dataList)
+        findViewById<ListView>(R.id.listView).setOnItemClickListener { _, _, i, _ ->
+            val intent = Intent(this, lista_enfermeiro::class.java)
+            intent.putExtra("id", dataList[+i]["id"])
+            intent.putExtra("name", dataList[+i]["name"])
+            intent.putExtra("age", dataList[+i]["age"])
+            intent.putExtra("email", dataList[+i]["email"])
             startActivity(intent)
         }
     }
 
-
-    companion object{
-        const val INFO_EXTRA_NOME = "NOME"
-        const val INFO_EXTRA_NUMERO = "NUMERO"
-
-
+    fun fabClicked(v: View){
+        val intent = Intent(this, lista_enfermeiro::class.java)
+        startActivity(intent)
     }
+    public override fun onResume() {
+        super.onResume()
+        loadIntoList()
+    }
+
+
 }

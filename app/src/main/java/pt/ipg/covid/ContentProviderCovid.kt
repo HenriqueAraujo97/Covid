@@ -11,7 +11,7 @@ import kotlin.reflect.KTypeProjection
 class ContentProviderCovid : ContentProvider() {
     private var bdCovidOpenHelper : BdCovidOpenHelper? = null
     override fun onCreate(): Boolean {
-        bdCovidOpenHelper = BdCovidOpenHelper(context)
+       // bdCovidOpenHelper = BdCovidOpenHelper(context)
         return true
     }
 

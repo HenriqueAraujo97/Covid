@@ -1,10 +1,12 @@
 package pt.ipg.covid
 
+import android.R.attr
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.EditText
+import androidx.appcompat.app.AppCompatActivity
+
 
 class activity_paciente : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -49,7 +51,7 @@ class activity_paciente : AppCompatActivity() {
 
             }
 
-            startActivity(intent)
+           startActivity(intent)
         }
     }
 

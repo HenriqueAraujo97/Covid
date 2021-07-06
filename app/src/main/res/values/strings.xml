@@ -26,6 +26,7 @@
     <string name="ver_lista_enfermeiro">Ver Lista</string>
     <string name="guardar_enfermeiro">Guardar</string>
     <string name="covidapp_enfermeiro">CovidApp</string>
+    <string name="tod">TOD</string>
 
 
 </resources>
