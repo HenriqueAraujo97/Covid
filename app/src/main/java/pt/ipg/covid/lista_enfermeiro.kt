@@ -1,12 +1,10 @@
 package pt.ipg.covid
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
-import android.widget.ListView
 import android.widget.Toast
 
 class lista_enfermeiro : AppCompatActivity() {
@@ -21,7 +19,7 @@ class lista_enfermeiro : AppCompatActivity() {
         setContentView(R.layout.activity_lista_enfermeiro)
 
         nameEditText = findViewById(R.id.name)
-        ageEditText = findViewById(R.id.age)
+        ageEditText = findViewById(R.id.number)
         emailEditText = findViewById(R.id.email)
 
         /* Check  if activity opened from List Item Click */
@@ -39,7 +37,7 @@ class lista_enfermeiro : AppCompatActivity() {
     }
 
 
-    fun add(v:View){
+    fun Add(v:View){
         val name = nameEditText.text.toString()
         val age = ageEditText.text.toString()
         val email = emailEditText.text.toString()

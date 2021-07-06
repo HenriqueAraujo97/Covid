@@ -93,7 +93,7 @@ class TestesBaseDados {
 
     @Before
     fun apagaBaseDados(){
-        getAppContext().deleteDatabase(BdCovidOpenHelper.NOME_BASE_DADOS)
+        getAppContext().deleteDatabase(BdCovidOpenHelper.DATABASE_NAME)
     }
 
 
