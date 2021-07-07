@@ -11,13 +11,13 @@
         android:id="@+id/name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Name"/>
+        android:hint="Nome" />
 
     <EditText
         android:id="@+id/number"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="numero"
+        android:hint="Data de Nascimento"
         android:inputType="number" />
 
     <EditText

@@ -10,14 +10,14 @@
         android:id="@+id/name_paciente"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Name"/>
+        android:hint="Nome" />
 
     <EditText
         android:id="@+id/age_paciente"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Age"
-        android:inputType="number"/>
+        android:hint="Data de Nascimento"
+        android:inputType="number" />
 
     <EditText
         android:id="@+id/email_paciente"

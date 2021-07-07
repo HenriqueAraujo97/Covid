@@ -21,7 +21,7 @@ class CustomAdapter(private val context: Context,
 
         val rowView = inflater.inflate(R.layout.list_row, parent, false)
         rowView.findViewById<TextView>(R.id.row_name).text = dataitem["name"]
-        rowView.findViewById<TextView>(R.id.row_age).text = "Age: " + dataitem["age"]
+        rowView.findViewById<TextView>(R.id.row_age).text = "Idade: " + dataitem["age"]
         rowView.findViewById<TextView>(R.id.row_email).text = "Email: " + dataitem["email"]
 
 

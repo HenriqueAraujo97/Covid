@@ -20,7 +20,7 @@ class CustomAdapterPaciente(private val context: Context,
 
         val rowView = inflater.inflate(R.layout.list_row_pacientes, parent, false)
         rowView.findViewById<TextView>(R.id.row_name_paciente).text = dataitem["name_paciente"]
-        rowView.findViewById<TextView>(R.id.row_age_paciente).text = "Age: " + dataitem["age_paciente"]
+        rowView.findViewById<TextView>(R.id.row_age_paciente).text = "Idade: " + dataitem["age_paciente"]
         rowView.findViewById<TextView>(R.id.row_email_paciente).text = "Email: " + dataitem["email_paciente"]
 
 
