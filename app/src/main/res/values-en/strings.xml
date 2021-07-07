@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Covid</string>
+    <string name="paciente">Patient</string>
+    <string name="enfermeiro">Nurse</string>
+    <string name="vacina">Vacine</string>
+    <string name="covidapp">CovidApp</string>
+    <string name="todo">TODO</string>
+    <string name="nome_obrigatorio">Please insert your name</string>
+    <string name="data_obrigatorio">Please insert your birth date</string>
+    <string name="telefone_obrigatorio">Please insert your phone</string>
+    <string name="data_de_nascimento">Birth Date</string>
+    <string name="title_activity_lista_pacientes">list_patients</string>
+    <string name="textviewNumero">TextView</string>
+    <string name="textView2">Name</string>
+    <string name="textViewNascimento">Birth Date</string>
+    <string name="textViewTelefone">Phone number</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="nameEnfermeiro">Name</string>
+    <string name="ver_lista_enfermeiro">Show list</string>
+    <string name="guardar_enfermeiro">Save</string>
+    <string name="covidapp_enfermeiro">CovidApp</string>
+    <string name="tod">TOD</string>
+</resources>
