@@ -18,7 +18,7 @@ class vacinas : AppCompatActivity() {
     fun loadIntoList(){
 
         dataListVacinas.clear()
-        val cursor = dbHandler.getAllRowPaciente()
+        val cursor = dbHandler.getAllRowVacinas()
         cursor!!.moveToFirst()
 
         while (!cursor.isAfterLast) {
@@ -31,7 +31,7 @@ class vacinas : AppCompatActivity() {
 
             cursor.moveToNext()
         }
-        findViewById<ListView>(R.id.listView_Vacinas).adapter = CustomAdapterPaciente(this@vacinas, dataListVacinas)
+        findViewById<ListView>(R.id.listView_Vacinas).adapter = CustomAdapterVacina(this@vacinas, dataListVacinas)
         findViewById<ListView>(R.id.listView_Vacinas).setOnItemClickListener { _, _, i, _ ->
             val intent = Intent(this, lista_vacinas::class.java)
             intent.putExtra("id_vacina", dataListVacinas[+i]["id_vacina"])

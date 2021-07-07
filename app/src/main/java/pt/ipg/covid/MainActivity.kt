@@ -28,5 +28,13 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    fun verVacina(view: View){
+
+        val intentVacina = Intent(this,vacinas::class.java)
+
+        startActivity(intentVacina)
+
+    }
+
 
 }

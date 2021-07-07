@@ -57,7 +57,7 @@ class lista_pacientes : AppCompatActivity() {
 
     fun delete_paciente(v:View){
         dbHandler.deleteRowPacientes(modifyIdPaciente)
-        Toast.makeText(this, "Paciente Apagdo", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, "Paciente Apagado", Toast.LENGTH_SHORT).show()
         finish()
     }
 }
