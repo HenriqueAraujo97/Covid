@@ -30,25 +30,27 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
         <Button
             android:id="@+id/btnAdd_paciente"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Add"
-            android:onClick="add_paciente"/>
+            android:onClick="add_paciente"
+            android:text="Adicionar" />
 
         <Button
             android:id="@+id/btnUpdate_paciente"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Update"
-            android:onClick="update_paciente"/>
+            android:onClick="update_paciente"
+            android:text="Atualizar" />
+
         <Button
             android:id="@+id/btnDelete_paciente"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Delete"
-            android:onClick="delete_paciente"/>
+            android:onClick="delete_paciente"
+            android:text="Apagar" />
     </LinearLayout>
 
 

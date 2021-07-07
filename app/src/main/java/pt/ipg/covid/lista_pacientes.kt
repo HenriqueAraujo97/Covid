@@ -42,22 +42,22 @@ class lista_pacientes : AppCompatActivity() {
         val age_paciente = agePacienteEditText.text.toString()
         val email_paciente = emailPacienteEditText.text.toString()
         dbHandler.insertRowPacientes(name_paciente , age_paciente, email_paciente)
-        Toast.makeText(this, "Data Addeded", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, "Paciente Adicionado", Toast.LENGTH_SHORT).show()
         finish()
     }
 
     fun update_paciente(v:View){
-        val name_pacient = namePacienteEditText.text.toString()
+        val name_paciente = namePacienteEditText.text.toString()
         val age_paciente = agePacienteEditText.text.toString()
         val email_paciente = emailPacienteEditText.text.toString()
-        dbHandler.updateRowPacientes(modifyIdPaciente, name_pacient, age_paciente, email_paciente)
-        Toast.makeText(this, "Data Updated", Toast.LENGTH_SHORT).show()
+        dbHandler.updateRowPacientes(modifyIdPaciente, name_paciente, age_paciente, email_paciente)
+        Toast.makeText(this, "Paciente Atualizado", Toast.LENGTH_SHORT).show()
         finish()
     }
 
     fun delete_paciente(v:View){
         dbHandler.deleteRowPacientes(modifyIdPaciente)
-        Toast.makeText(this, "Data Deleted", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, "Paciente Apagdo", Toast.LENGTH_SHORT).show()
         finish()
     }
 }

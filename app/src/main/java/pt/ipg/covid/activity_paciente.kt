@@ -33,7 +33,7 @@ class activity_paciente : AppCompatActivity() {
         }
         findViewById<ListView>(R.id.listView_Pacientes).adapter = CustomAdapterPaciente(this@activity_paciente, dataListPaciente)
         findViewById<ListView>(R.id.listView_Pacientes).setOnItemClickListener { _, _, i, _ ->
-            val intent = Intent(this, lista_enfermeiro::class.java)
+            val intent = Intent(this, lista_pacientes::class.java)
             intent.putExtra("id_paciente", dataListPaciente[+i]["id_paciente"])
             intent.putExtra("name_paciente", dataListPaciente[+i]["name_paciente"])
             intent.putExtra("age_paciente", dataListPaciente[+i]["age_paciente"])

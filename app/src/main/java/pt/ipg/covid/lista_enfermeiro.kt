@@ -42,7 +42,7 @@ class lista_enfermeiro : AppCompatActivity() {
         val age = ageEditText.text.toString()
         val email = emailEditText.text.toString()
         dbHandler.insertRow(name, age, email)
-        Toast.makeText(this, "Data Addeded", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, "Enfermeiro(a) Adicionado(a)", Toast.LENGTH_SHORT).show()
         finish()
     }
 
@@ -51,13 +51,13 @@ class lista_enfermeiro : AppCompatActivity() {
         val age = ageEditText.text.toString()
         val email = emailEditText.text.toString()
         dbHandler.updateRow(modifyId, name, age, email)
-        Toast.makeText(this, "Data Updated", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, "Enfermeiro(a) Atualizado(a)", Toast.LENGTH_SHORT).show()
         finish()
     }
 
     fun delete(v:View){
         dbHandler.deleteRow(modifyId)
-        Toast.makeText(this, "Data Deleted", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, "Enfermeiro(a) Apagado(a)", Toast.LENGTH_SHORT).show()
         finish()
     }
 }
