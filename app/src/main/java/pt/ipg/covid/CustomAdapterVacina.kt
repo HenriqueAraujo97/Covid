@@ -19,7 +19,7 @@ class CustomAdapterVacina(private val context: Context,
         var dataitem = dataList[position]
 
         val rowView = inflater.inflate(R.layout.list_row_vacinas, parent, false)
-        rowView.findViewById<TextView>(R.id.row_name_vacina).text = dataitem["name_paciente"]
+        rowView.findViewById<TextView>(R.id.row_name_vacina).text = dataitem["name_vacina"]
         rowView.findViewById<TextView>(R.id.row_nr_vacina).text = "Numero: " + dataitem["nr_vacina"]
         rowView.findViewById<TextView>(R.id.row_validade_vacina).text = "Validade: " + dataitem["validade_vacina"]
 

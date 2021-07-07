@@ -17,13 +17,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Data de Nascimento"
-        android:inputType="number" />
+        android:inputType="date" />
 
     <EditText
         android:id="@+id/email_paciente"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Email"/>
+        android:hint="Email"
+        android:inputType="textWebEmailAddress" />
 
 
     <LinearLayout

@@ -25,13 +25,13 @@
             android:layout_height="wrap_content"
             android:text="Quantidade" />
 
-        <TextView
-            android:id="@+id/row_validade_vacina"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:text="Validade" />
-
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/row_validade_vacina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:text="Validade" />
 
 </LinearLayout>

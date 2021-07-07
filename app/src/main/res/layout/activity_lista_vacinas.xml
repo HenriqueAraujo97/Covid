@@ -16,14 +16,14 @@
         android:id="@+id/nr_vacina"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Age"
-        android:inputType="number"/>
+        android:hint="Quantidade"
+        android:inputType="date|number" />
 
     <EditText
         android:id="@+id/validade_vacina"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Email"/>
+        android:hint="Validade" />
 
 
     <LinearLayout
